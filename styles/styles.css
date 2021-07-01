@@ -1,0 +1,17 @@
+div {
+    box-sizing: border-box;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+}
+body {
+    margin: 0px;
+    background-color: #f9895e;
+}
+@font-face {
+    font-family: Myriad Pro;
+}
+/*-----------------------------------------------------------------------*/
