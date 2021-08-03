@@ -1,19 +1,19 @@
-<%= link_to "New article", new_article_path, :class => "article_title" %>
+<%= link_to "Add article", new_article_path, :class => "article_title_new" %>
 <% @articles.each do |article| %>
-    <% if article.id.present? %>
-      <div>
-        <%= %>
+    <% if article.id %>
+      <div class="blog_div">
+
         <h1><%= article.title %></h1>
         <p><%= article.body %></p>
         <% if article.photo.attached? %>
-          <div>
-            <image style="width: 100%;" src="<%=(url_for(article.photo)) %>"></image>
+          <div class="blog_image" style="display: flex; justify-content: center">
+            <image style="border-radius: 10px; max-height: 300px; margin: 0 auto" src="<%=(url_for(article.photo)) %>"></image>
           </div>
         <% end %>
-        <div>
+        <div class="blog_buttons">
           <%#= link_to "Home", root_path %>
-          <%= link_to "Edit", edit_article_path(article) %>
-          <%= button_to "Delete", article_path(article), method: :delete %>
+          <%= button_to "Edit", edit_article_path(article), :method => :get, class:"blog_button" %>
+          <%= button_to "Delete", article_path(article), method: :delete, class:"blog_button" %>
         </div>
        </div>
     <% end %>
