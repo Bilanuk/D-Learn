@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <%= stylesheet_link_tag "styles" %>
+</head>
+<body>
+<header class="site-header">
+  <a href="#" class="logo"><img src="" alt=""></a>
+  <nav>
+    <ul class="buttons">
+      <li class="element element_1"><a href="#">Додому</a></li>
+      <li class="element element_2"><a href="#">Новини</a></li>
+      <li class="element element_3"><a href="#">Предмети</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="space"></div>
+<content class="content">
+  <div class="news">
+    <div class="auth_sign">
+      <p>Новини</p>
+    </div>
+    <div class="blog">
+      <%= yield %>
+
+    </div>
+  </div>
+  <div class="auth">
+    <div class="auth_sign">
+      <p>Авторизація</p>
+    </div>
+    <div class="data">
+      <div class="input_values">
+        <p>Пошта</p>
+        <input type="text" class="input_box" placeholder="">
+      </div>
+      <div class="input_values">
+        <p>Пароль</p>
+        <input type="text" class="input_box" placeholder="">
+      </div>
+      <div class="button_wrapper">
+        <a href="#">
+          <div class="button">
+            <p>Вхід</p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="button">
+            <p>Реєстрація</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</content>
+</body>
+</html>

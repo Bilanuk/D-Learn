@@ -1,0 +1,20 @@
+<%= link_to "New article", new_article_path, :class => "article_title" %>
+<% @articles.each do |article| %>
+    <% if article.id.present? %>
+      <div>
+        <%= %>
+        <h1><%= article.title %></h1>
+        <p><%= article.body %></p>
+        <% if article.photo.attached? %>
+          <div>
+            <image style="width: 100%;" src="<%=(url_for(article.photo)) %>"></image>
+          </div>
+        <% end %>
+        <div>
+          <%#= link_to "Home", root_path %>
+          <%= link_to "Edit", edit_article_path(article) %>
+          <%= button_to "Delete", article_path(article), method: :delete %>
+        </div>
+       </div>
+    <% end %>
+<% end %>
