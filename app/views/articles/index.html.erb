@@ -6,8 +6,8 @@
         <h1><%= article.title %></h1>
         <p><%= article.body %></p>
         <% if article.photo.attached? %>
-          <div class="blog_image" style="display: flex; justify-content: center">
-            <image style="border-radius: 10px; max-height: 300px; margin: 0 auto" src="<%=(url_for(article.photo)) %>"></image>
+          <div class="blog_image" style="display: flex; justify-content: center;">
+            <image style="border-radius: 10px; max-height: 300px; margin: 0 auto; max-width: 100%" src="<%=(url_for(article.photo)) %>"></image>
           </div>
         <% end %>
         <div class="blog_buttons">
